@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2P Academy - Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="A2P Logo">
+                <span class="logo-text">A2P</span>
+            </a>
+            <nav>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    <li><a href="selected-ratio.html">STUDENTS</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="https://forms.gle/9uJvjWCLjofXd4NF9" target="_blank" rel="noopener" class="register-link">REGISTER</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h1>Contact Us</h1>
+                <p>Have questions or need more information? We're here to help. Get in touch with A2P Academy using any of the methods below.</p>
+            </section>
+
+            <section class="section">
+                <h2>Contact Information</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <div style="font-size: 3em; margin-bottom: 15px;">📍</div>
+                        <h3>Our Location</h3>
+                        <p>
+                            A2P Academy<br>
+                            123 Education Street<br>
+                            New Delhi, India 110001
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div style="font-size: 3em; margin-bottom: 15px;">📞</div>
+                        <h3>Phone</h3>
+                        <p>
+                            Main: <a href="tel:+918696023635" style="color: #667eea; text-decoration: none;">+91 8696023635</a><br>
+                            Toll Free: <a href="tel:1800A2PACAD" style="color: #667eea; text-decoration: none;">1800-A2P-ACAD</a><br>
+                            Support: <a href="tel:+911234567899" style="color: #667eea; text-decoration: none;">+918696023635</a>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div style="font-size: 3em; margin-bottom: 15px;">✉️</div>
+                        <h3>Email</h3>
+                        <p>
+                            General: <a href="mailto:engharshittiwari@gmail.com" style="color: #667eea; text-decoration: none;">engharshittiwari@gmail.com</a><br>
+                            Admissions: <a href="mailto:admissions@a2pacademy.com" style="color: #667eea; text-decoration: none;">admissions@a2pacademy.com</a><br>
+                            Support: <a href="mailto:support@a2pacademy.com" style="color: #667eea; text-decoration: none;">support@a2pacademy.com</a>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div style="font-size: 3em; margin-bottom: 15px;">🕐</div>
+                        <h3>Office Hours</h3>
+                        <p>
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 10:00 AM - 4:00 PM<br>
+                            Sunday: Closed<br>
+                            <small>*Indian Standard Time (IST)</small>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Send us a Message</h2>
+                <div class="form-container">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event, 'contactForm')">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="admission">Admission Inquiry</option>
+                                <option value="courses">Course Information</option>
+                                <option value="fees">Fee Structure</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="placement">Placement Assistance</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Please share your inquiry or feedback..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Follow Us on Social Media</h2>
+                <p style="text-align: center; margin-bottom: 30px;">Connect with us for latest updates, tips, and announcements.</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://facebook.com" target="_blank" class="btn">📘 Facebook</a>
+                    <a href="https://t.me/+JiSCBWvNZ4Y1NDI1" target="_blank" class="btn">𝕏 Talegarm</a>
+                    <a href="https://www.instagram.com/code_with_a2p/" target="_blank" class="btn">📷 Instagram</a>
+                    <a href="https://www.linkedin.com/company/a2p-academy" target="_blank" class="btn">💼 LinkedIn</a>
+                    <a href="https://www.youtube.com/@A2P94/videos" target="_blank" class="btn">▶️ YouTube</a>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="cards-container">
+                    <div class="card" style="text-align: left;">
+                        <h3>How do I enroll in a course?</h3>
+                        <p>Visit our Registration page, fill in your details, select your preferred course, and complete the enrollment process. Our admissions team will guide you through.</p>
+                    </div>
+                    <div class="card" style="text-align: left;">
+                        <h3>What are the course fees?</h3>
+                        <p>Course fees vary depending on the course level and duration. Please contact our admissions team or visit the course page for specific pricing information.</p>
+                    </div>
+                    <div class="card" style="text-align: left;">
+                        <h3>Do you offer online courses?</h3>
+                        <p>Yes! We offer both online and offline courses. You can choose the learning mode that best suits your schedule and preferences.</p>
+                    </div>
+                    <div class="card" style="text-align: left;">
+                        <h3>What is your refund policy?</h3>
+                        <p>We offer a 100% refund if you withdraw within 7 days of enrollment. Please contact support for more details.</p>
+                    </div>
+                    <div class="card" style="text-align: left;">
+                        <h3>Is there placement assistance?</h3>
+                        <p>Yes, we provide comprehensive placement assistance including interview preparation, resume building, and job placement help.</p>
+                    </div>
+                    <div class="card" style="text-align: left;">
+                        <h3>How long are courses?</h3>
+                        <p>Course duration varies from 4 weeks to 16 weeks depending on the program. Details are available on each course page.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>A2P Academy</h4>
+                <p>Excellence in Education</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://forms.gle/9uJvjWCLjofXd4NF9" target="_blank" rel="noopener" class="register-link">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:engharshittiwari@gmail.com">info@a2pacademy.com</a></p>
+                <p>Phone: <a href="tel:+918696023635">+918696023635</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a class="social-icon" href="https://forms.gle/9uJvjWCLjofXd4NF9" target="_blank" rel="noopener" aria-label="Register">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.9 12a5.1 5.1 0 0 1 5.1-5.1h3v1.8h-3A3.3 3.3 0 1 0 12.3 12h-1.8A5.1 5.1 0 0 1 3.9 12zm16.2 0a5.1 5.1 0 0 1-5.1 5.1h-3v-1.8h3a3.3 3.3 0 1 0 0-6.6h-1.2V7.5h1.2a5.1 5.1 0 0 1 5.1 4.5z"/></svg>
+                    </a>
+                    <a class="social-icon" href="https://www.youtube.com/@A2P94/videos" target="_blank" rel="noopener" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 6.2s-.2-1.7-.8-2.5c-.8-.9-1.7-.9-2.1-1C16.8 2.2 12 2.2 12 2.2h-.1s-4.8 0-7.9.5c-.5 0-1.4.1-2.2 1C1 4.6.8 6.2.8 6.2S0 8 .0 9.8v1.5C0 13.9.2 15.6.8 16.4c.8.9 1.9.9 2.4 1 1.7.2 7 0 7 0s4.8.1 7.9-.4c.5 0 1.4-.1 2.2-1 .6-.8.8-2.6.8-2.6s.2-1.7.2-3.5V9.8c0-1.8-.2-3.6-.2-3.6zM9.8 15.1V8.9l6.1 3.1-6.1 3.1z"/></svg>
+                    </a>
+                    <a class="social-icon" href="https://www.instagram.com/code_with_a2p/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zm6.4-3.3a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/></svg>
+                    </a>
+                    <a class="social-icon" href="https://t.me/+JiSCBWvNZ4Y1NDI1" target="_blank" rel="noopener" aria-label="Telegram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 2L2 9.2l5.2 2.1L9.3 20 12 15.6 21.8 3.8 22 2z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 A2P Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

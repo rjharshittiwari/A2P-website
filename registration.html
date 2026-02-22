@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2P Academy - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="A2P Logo">
+                <span class="logo-text">A2P</span>
+            </a>
+            <nav>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    <li><a href="selected-ratio.html">STUDENTS</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="https://forms.gle/9uJvjWCLjofXd4NF9" target="_blank" rel="noopener" class="register-link">REGISTER</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h1>Register for A2P Academy</h1>
+                <p>Join thousands of successful students! Fill out the form below to register for your desired course and begin your learning journey with A2P Academy.</p>
+            </section>
+
+            <section class="section">
+                <div class="form-container">
+                    <h2 style="text-align: center; margin-top: 0;">Enrollment Form</h2>
+                    <form id="registrationForm" onsubmit="handleFormSubmit(event, 'registrationForm')">
+                        
+                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Personal Information</h3>
+
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select your gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Address Information</h3>
+
+                        <div class="form-group">
+                            <label for="address">Street Address *</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state">State/Province *</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zip">ZIP/Postal Code *</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country *</label>
+                            <input type="text" id="country" name="country" required>
+                        </div>
+
+                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Course Information</h3>
+
+                        <div class="form-group">
+                            <label for="course">Select Course *</label>
+                            <select id="course" name="course" required>
+                                <option value="">Choose a course</option>
+                                <option value="web-dev">Web Development Bootcamp</option>
+                                <option value="data-science">Data Science Mastery</option>
+                                <option value="digital-marketing">Digital Marketing Certification</option>
+                                <option value="aws">Cloud Computing with AWS</option>
+                                <option value="ai-ml">Artificial Intelligence & Machine Learning</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="science">Science</option>
+                                <option value="english">English</option>
+                                <option value="languages">Languages</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="level">Course Level *</label>
+                            <select id="level" name="level" required>
+                                <option value="">Select level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mode">Learning Mode *</label>
+                            <select id="mode" name="mode" required>
+                                <option value="">Select mode</option>
+                                <option value="online">Online</option>
+                                <option value="offline">Offline</option>
+                                <option value="hybrid">Hybrid</option>
+                            </select>
+                        </div>
+
+                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Educational Background</h3>
+
+                        <div class="form-group">
+                            <label for="education">Highest Education Level *</label>
+                            <select id="education" name="education" required>
+                                <option value="">Select education level</option>
+                                <option value="highschool">High School</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="bachelor">Bachelor's Degree</option>
+                                <option value="master">Master's Degree</option>
+                                <option value="phd">PhD</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Work Experience (years)</label>
+                            <input type="number" id="experience" name="experience" min="0" max="70">
+                        </div>
+
+                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Additional Information</h3>
+
+                        <div class="form-group">
+                            <label for="motivation">Why do you want to join A2P Academy? *</label>
+                            <textarea id="motivation" name="motivation" required placeholder="Tell us about your goals and what you hope to achieve..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hear">How did you hear about us?</label>
+                            <select id="hear" name="hear">
+                                <option value="">Select option</option>
+                                <option value="search">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="friend">Friend/Referral</option>
+                                <option value="advertisement">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center;">
+                                <input type="checkbox" name="terms" required style="width: auto; margin-right: 10px;">
+                                I agree to the Terms and Conditions and Privacy Policy *
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center;">
+                                <input type="checkbox" name="newsletter" style="width: auto; margin-right: 10px;">
+                                I want to receive updates and information about new courses
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%; padding: 15px; font-size: 18px; margin-top: 30px;">Submit Registration</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="text-center">Next Steps After Registration</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>1. Confirmation</h3>
+                        <p>You'll receive a confirmation email with your enrollment details and login credentials.</p>
+                    </div>
+                    <div class="card">
+                        <h3>2. Course Access</h3>
+                        <p>Get immediate access to course materials, video lectures, and resources on our learning platform.</p>
+                    </div>
+                    <div class="card">
+                        <h3>3. Class Schedule</h3>
+                        <p>Check your email for the detailed class schedule and join your first session at the scheduled time.</p>
+                    </div>
+                    <div class="card">
+                        <h3>4. Support</h3>
+                        <p>Our support team is available 24/7 to help with any questions or technical issues you may encounter.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section text-center">
+                <h2>Have Questions Before Registering?</h2>
+                <p>Contact our admissions team for more information about courses, fees, and enrollment process.</p>
+                <a href="contact.html" class="btn">Get in Touch</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>A2P Academy</h4>
+                <p>Excellence in Education</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://forms.gle/9uJvjWCLjofXd4NF9" target="_blank" rel="noopener" class="register-link">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:engharshittiwari@gmail.com">info@a2pacademy.com</a></p>
+                <p>Phone: <a href="tel:+918696023635">+918696023635</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a class="social-icon" href="https://forms.gle/9uJvjWCLjofXd4NF9" target="_blank" rel="noopener" aria-label="Register">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.9 12a5.1 5.1 0 0 1 5.1-5.1h3v1.8h-3A3.3 3.3 0 1 0 12.3 12h-1.8A5.1 5.1 0 0 1 3.9 12zm16.2 0a5.1 5.1 0 0 1-5.1 5.1h-3v-1.8h3a3.3 3.3 0 1 0 0-6.6h-1.2V7.5h1.2a5.1 5.1 0 0 1 5.1 4.5z"/></svg>
+                    </a>
+                    <a class="social-icon" href="https://www.youtube.com/@A2P94/videos" target="_blank" rel="noopener" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 6.2s-.2-1.7-.8-2.5c-.8-.9-1.7-.9-2.1-1C16.8 2.2 12 2.2 12 2.2h-.1s-4.8 0-7.9.5c-.5 0-1.4.1-2.2 1C1 4.6.8 6.2.8 6.2S0 8 .0 9.8v1.5C0 13.9.2 15.6.8 16.4c.8.9 1.9.9 2.4 1 1.7.2 7 0 7 0s4.8.1 7.9-.4c.5 0 1.4-.1 2.2-1 .6-.8.8-2.6.8-2.6s.2-1.7.2-3.5V9.8c0-1.8-.2-3.6-.2-3.6zM9.8 15.1V8.9l6.1 3.1-6.1 3.1z"/></svg>
+                    </a>
+                    <a class="social-icon" href="https://www.instagram.com/code_with_a2p/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zm6.4-3.3a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/></svg>
+                    </a>
+                    <a class="social-icon" href="https://t.me/+JiSCBWvNZ4Y1NDI1" target="_blank" rel="noopener" aria-label="Telegram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 2L2 9.2l5.2 2.1L9.3 20 12 15.6 21.8 3.8 22 2z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 A2P Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
