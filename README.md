@@ -1,4 +1,6 @@
-# A2P Academy Website - Complete Documentation
+git remote add origin https://github.com/YOUR_USERNAME/A2P-website.git
+git branch -M main
+git push -u origin main# A2P Academy Website - Complete Documentation
 
 ## 🎯 Project Overview
 A2P Academy is a professional educational institution website with a modern, responsive design featuring a light cream background with soft blue accents.

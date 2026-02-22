@@ -56,18 +56,18 @@
                         <div style="font-size: 3em; margin-bottom: 15px;">📞</div>
                         <h3>Phone</h3>
                         <p>
-                            Main: <a href="tel:+918696023635" style="color: #667eea; text-decoration: none;">+91 8696023635</a><br>
-                            Toll Free: <a href="tel:1800A2PACAD" style="color: #667eea; text-decoration: none;">1800-A2P-ACAD</a><br>
-                            Support: <a href="tel:+911234567899" style="color: #667eea; text-decoration: none;">+918696023635</a>
+                            Main: <a href="tel:+918696023635" style="color: #FF1744; text-decoration: none;">+91 8696023635</a><br>
+                            Toll Free: <a href="tel:1800A2PACAD" style="color: #FF1744; text-decoration: none;">1800-A2P-ACAD</a><br>
+                            Support: <a href="tel:+911234567899" style="color: #FF1744; text-decoration: none;">+918696023635</a>
                         </p>
                     </div>
                     <div class="card">
                         <div style="font-size: 3em; margin-bottom: 15px;">✉️</div>
                         <h3>Email</h3>
                         <p>
-                            General: <a href="mailto:engharshittiwari@gmail.com" style="color: #667eea; text-decoration: none;">engharshittiwari@gmail.com</a><br>
-                            Admissions: <a href="mailto:admissions@a2pacademy.com" style="color: #667eea; text-decoration: none;">admissions@a2pacademy.com</a><br>
-                            Support: <a href="mailto:support@a2pacademy.com" style="color: #667eea; text-decoration: none;">support@a2pacademy.com</a>
+                            General: <a href="mailto:engharshittiwari@gmail.com" style="color: #FF1744; text-decoration: none;">engharshittiwari@gmail.com</a><br>
+                            Admissions: <a href="mailto:admissions@a2pacademy.com" style="color: #FF1744; text-decoration: none;">admissions@a2pacademy.com</a><br>
+                            Support: <a href="mailto:support@a2pacademy.com" style="color: #FF1744; text-decoration: none;">support@a2pacademy.com</a>
                         </p>
                     </div>
                     <div class="card">
@@ -213,5 +213,25 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="api-helper.js"></script>
+    <script>
+        async function handleFormSubmit(event, formId) {
+            event.preventDefault();
+            
+            const form = document.getElementById(formId);
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            const result = await submitContact(formData);
+            if (result.success) {
+                form.reset();
+            }
+        }
+    </script>
 </body>
 </html>

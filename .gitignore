@@ -1,0 +1,93 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Flask
+instance/
+.webassets-cache
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Sensitive Files - DO NOT COMMIT
+credentials.json
+backend/credentials.json
+*.pem
+*.key
+*.crt
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+backups/
+*.backup
+
+# Logs
+*.log
+logs/
+error.log
+
+# OS
+.DS_Store
+Thumbs.db
+.Trashes
+
+# Temporary Files
+*.tmp
+*.temp
+*.cache
+
+# Node (if using frontend build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# System
+.env.production
+config.production.json
+
+# Secrets
+*.secret
+secret_*.txt

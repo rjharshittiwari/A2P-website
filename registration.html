@@ -45,7 +45,7 @@
                     <h2 style="text-align: center; margin-top: 0;">Enrollment Form</h2>
                     <form id="registrationForm" onsubmit="handleFormSubmit(event, 'registrationForm')">
                         
-                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Personal Information</h3>
+                        <h3 style="color: #FF1744; margin-top: 30px; margin-bottom: 15px;">Personal Information</h3>
 
                         <div class="form-group">
                             <label for="firstName">First Name *</label>
@@ -82,7 +82,7 @@
                             </select>
                         </div>
 
-                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Address Information</h3>
+                        <h3 style="color: #FF1744; margin-top: 30px; margin-bottom: 15px;">Address Information</h3>
 
                         <div class="form-group">
                             <label for="address">Street Address *</label>
@@ -109,7 +109,7 @@
                             <input type="text" id="country" name="country" required>
                         </div>
 
-                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Course Information</h3>
+                        <h3 style="color: #FF1744; margin-top: 30px; margin-bottom: 15px;">Course Information</h3>
 
                         <div class="form-group">
                             <label for="course">Select Course *</label>
@@ -148,7 +148,7 @@
                             </select>
                         </div>
 
-                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Educational Background</h3>
+                        <h3 style="color: #FF1744; margin-top: 30px; margin-bottom: 15px;">Educational Background</h3>
 
                         <div class="form-group">
                             <label for="education">Highest Education Level *</label>
@@ -167,7 +167,7 @@
                             <input type="number" id="experience" name="experience" min="0" max="70">
                         </div>
 
-                        <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Additional Information</h3>
+                        <h3 style="color: #FF1744; margin-top: 30px; margin-bottom: 15px;">Additional Information</h3>
 
                         <div class="form-group">
                             <label for="motivation">Why do you want to join A2P Academy? *</label>
@@ -279,5 +279,25 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="api-helper.js"></script>
+    <script>
+        async function handleFormSubmit(event, formId) {
+            event.preventDefault();
+            
+            const form = document.getElementById(formId);
+            const formData = {
+                full_name: (document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value).trim(),
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                course: document.getElementById('course').value,
+                message: document.getElementById('motivation').value
+            };
+            
+            const result = await submitRegistration(formData);
+            if (result.success) {
+                form.reset();
+            }
+        }
+    </script>
 </body>
 </html>
