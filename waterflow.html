@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b26">
+  <meta name="description" content="AquaFlow — a smarter, simpler way to monitor and manage water flow.">
+  <title>AquaFlow | Smart Water Control</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="waterflow.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="waterflow.html" aria-label="AquaFlow home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3C12 9 6.5 14.2 6.5 20a9.5 9.5 0 0 0 19 0C25.5 14.2 20 9 16 3Z"/><path d="M11.5 21a4.5 4.5 0 0 0 4.5 4.5"/></svg></span>
+        <span class="brand-name">aqua<span>flow</span><small>SMART WATER SYSTEMS</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="nav-item active" href="#overview"><span class="nav-icon">◫</span>Overview</a>
+        <a class="nav-item" href="#zones"><span class="nav-icon">⌁</span>Water zones</a>
+        <a class="nav-item" href="#schedule"><span class="nav-icon">◷</span>Schedules</a>
+        <a class="nav-item" href="#insights"><span class="nav-icon">▥</span>Usage insights</a>
+      </nav>
+      <div class="side-label systems-label">SYSTEM</div>
+      <nav class="side-nav" aria-label="System navigation">
+        <a class="nav-item" href="#alerts"><span class="nav-icon">♧</span>Alerts <span class="alert-count">2</span></a>
+        <a class="nav-item" href="#settings"><span class="nav-icon">⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-symbol">✳</span><strong>Need a hand?</strong><p>Our water experts are here to help.</p><a href="mailto:hello@aquaflow.example">Get support <span>↗</span></a></div>
+        <button class="profile-button" type="button" aria-label="Account profile"><span class="avatar">AT</span><span class="profile-copy"><strong>Alex Taylor</strong><small>Home owner</small></span><span class="profile-menu">···</span></button>
+      </div>
+    </aside>
+
+    <main class="main-area" id="overview">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuButton" type="button" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb">My home <span>/</span> <strong>Overview</strong></div>
+        <div class="top-actions"><span class="connection"><i></i> All systems normal</span><button class="icon-button" type="button" aria-label="Notifications" id="notificationButton">♧<b></b></button><span class="top-avatar">AT</span></div>
+      </header>
+      <div class="page-content">
+        <section class="welcome-row">
+          <div><p class="eyebrow">THURSDAY, MAY 21 <span class="weather">☀ &nbsp;24° sunny</span></p><h1>Your water, <span>in balance.</span></h1><p class="welcome-copy">A clear view of every drop flowing through your home.</p></div>
+          <button class="outline-button" id="refreshButton" type="button"><span>↻</span> Refresh data</button>
+        </section>
+
+        <section class="overview-grid" aria-label="Water overview">
+          <article class="flow-card">
+            <div class="flow-head"><div><div class="card-kicker"><span class="live-dot"></span> LIVE WATER FLOW</div><div class="flow-number"><span id="flowRate">12.8</span><small> L/min</small></div><p class="flow-caption">Across your home right now</p></div><span class="today-pill">TODAY <b>↗ 8.2%</b></span></div>
+            <div class="flow-visual" aria-label="Flow rate trend chart"><div class="chart-y-labels"><span>20</span><span>15</span><span>10</span><span>5</span><span>0</span></div><svg class="flow-chart" viewBox="0 0 700 180" preserveAspectRatio="none" role="img" aria-label="Water flow has been steady today"><defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#62d6c3" stop-opacity=".25"/><stop offset="1" stop-color="#62d6c3" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0 139 C25 139 30 126 55 130 S86 145 110 124 S143 119 165 128 S194 106 220 113 S250 131 275 111 S307 97 330 109 S359 116 385 97 S415 102 440 91 S470 109 495 88 S526 83 550 96 S580 68 605 78 S634 66 655 74 S683 50 700 54 L700 180 L0 180Z"/><path class="chart-line" d="M0 139 C25 139 30 126 55 130 S86 145 110 124 S143 119 165 128 S194 106 220 113 S250 131 275 111 S307 97 330 109 S359 116 385 97 S415 102 440 91 S470 109 495 88 S526 83 550 96 S580 68 605 78 S634 66 655 74 S683 50 700 54"/><circle cx="700" cy="54" r="5" class="chart-point"/></svg><div class="chart-x-labels"><span>6 AM</span><span>9 AM</span><span>12 PM</span><span>3 PM</span><span>6 PM</span><span>NOW</span></div></div>
+            <div class="flow-foot"><span><i class="legend-dot"></i> Water flow</span><span>Updated just now <b>·</b> <button id="chartPeriod" type="button">Today⌄</button></span></div>
+          </article>
+          <article class="usage-card"><div class="usage-head"><div class="card-kicker">DAILY USAGE</div><button class="more-button" aria-label="More usage options" type="button">···</button></div><div class="usage-number"><span id="usageAmount">684</span><small> L</small></div><p class="usage-caption">of 900 L daily target</p><div class="progress-track"><span></span></div><div class="usage-bottom"><span><b>76%</b> of daily goal</span><span class="saving">↓ 12% <small>vs. last week</small></span></div><div class="usage-divider"></div><div class="target-row"><span class="target-icon">⌁</span><span><b>You're on track</b><small>At this pace, you'll save 216 L today.</small></span><span class="target-arrow">↗</span></div></article>
+        </section>
+
+        <section class="section-block" id="zones"><div class="section-heading"><div><p class="section-overline">CONTROL CENTER</p><h2>Your water zones <span class="zone-total">3 ZONES</span></h2></div><button class="text-button" id="allZonesButton" type="button">Turn all off <span>→</span></button></div>
+          <div class="zone-grid">
+            <article class="zone-card"><div class="zone-top"><span class="zone-icon irrigation">✿</span><span class="zone-status running"><i></i><span>Running</span></span></div><h3>Garden irrigation</h3><p>Backyard · Zone 01</p><div class="zone-metric"><span><b class="zone-flow">8.4</b> <small>L/min</small></span><span class="time-left">18 min left</span></div><div class="zone-bottom"><span>Next schedule <b>Tomorrow, 6:00 AM</b></span><button class="toggle-switch is-on" type="button" role="switch" aria-checked="true" aria-label="Garden irrigation" data-zone="Garden irrigation"><span></span></button></div></article>
+            <article class="zone-card"><div class="zone-top"><span class="zone-icon home-icon">⌂</span><span class="zone-status idle"><i></i><span>Standby</span></span></div><h3>Indoor supply</h3><p>Whole home · Zone 02</p><div class="zone-metric"><span><b class="zone-flow">4.4</b> <small>L/min</small></span><span class="time-left muted">On demand</span></div><div class="zone-bottom"><span>Pressure <b>3.2 bar</b></span><button class="toggle-switch is-on" type="button" role="switch" aria-checked="true" aria-label="Indoor supply" data-zone="Indoor supply"><span></span></button></div></article>
+            <article class="zone-card"><div class="zone-top"><span class="zone-icon drop-icon">⌁</span><span class="zone-status idle"><i></i><span>Standby</span></span></div><h3>Pool & spa</h3><p>Outdoor · Zone 03</p><div class="zone-metric"><span><b class="zone-flow">0.0</b> <small>L/min</small></span><span class="time-left muted">Off</span></div><div class="zone-bottom"><span>Next schedule <b>Today, 4:30 PM</b></span><button class="toggle-switch" type="button" role="switch" aria-checked="false" aria-label="Pool and spa" data-zone="Pool & spa"><span></span></button></div></article>
+          </div>
+        </section>
+
+        <section class="lower-grid">
+          <article class="schedule-card" id="schedule"><div class="section-heading compact"><div><p class="section-overline">AUTOMATE YOUR ROUTINE</p><h2>Upcoming schedules</h2></div><button class="text-button" id="addScheduleButton" type="button">+ Add schedule</button></div><div class="schedule-list" id="scheduleList"><div class="schedule-row"><span class="schedule-icon">☀</span><span class="schedule-info"><b>Garden irrigation</b><small>Backyard · 20 minutes</small></span><span class="schedule-time"><b>6:00 AM</b><small>Tomorrow</small></span><span class="schedule-day">MTWTF</span><span class="schedule-enabled">●</span></div><div class="schedule-row"><span class="schedule-icon pool">⌁</span><span class="schedule-info"><b>Pool & spa</b><small>Outdoor · 45 minutes</small></span><span class="schedule-time"><b>4:30 PM</b><small>Today</small></span><span class="schedule-day weekend">S S</span><span class="schedule-enabled">●</span></div></div><div class="schedule-footer"><span>Schedules adjust automatically for local weather.</span><a href="#settings">Manage all <span>→</span></a></div></article>
+          <article class="alert-card" id="alerts"><div class="section-heading compact"><div><p class="section-overline">ATTENTION</p><h2>Water insights <span class="alert-badge">2</span></h2></div><button class="more-button" type="button" aria-label="More insights">···</button></div><div class="insight-item"><span class="insight-icon amber">!</span><span><b>Higher usage detected</b><small>Garden used 8% more water this morning.</small><a href="#insights">View details →</a></span></div><div class="insight-item"><span class="insight-icon teal">✓</span><span><b>Everything looks good</b><small>No leaks detected in the last 24 hours.</small><a href="#insights">See system health →</a></span></div></article>
+        </section>
+        <footer class="page-footer"><span>© 2026 AquaFlow Systems</span><span>Designed for every drop <span class="footer-drop">♥</span></span><a href="index.html">A2P home</a></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="schedule-dialog" id="scheduleDialog"><form method="dialog" id="scheduleForm"><button class="dialog-close" value="cancel" aria-label="Close">×</button><p class="section-overline">MAKE IT AUTOMATIC</p><h2>Add a schedule</h2><label>Zone<select id="scheduleZone"><option>Garden irrigation</option><option>Indoor supply</option><option>Pool & spa</option></select></label><div class="form-row"><label>Start time<input id="scheduleTime" type="time" value="06:00" required></label><label>Duration<select id="scheduleDuration"><option>15 minutes</option><option selected>20 minutes</option><option>30 minutes</option><option>45 minutes</option></select></label></div><label>Repeat<select id="scheduleRepeat"><option>Every day</option><option>Weekdays</option><option>Weekends</option></select></label><button class="save-button" value="default">Save schedule <span>→</span></button></form></dialog>
+  <script src="waterflow.js"></script>
+</body>
+</html>
